@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem statement 1</title>
+</head>
+   
+<body>
+    <h3>Qs1. Create a const object called “product” to store information shown in the picture.</h3><br>
+    <img src="./images/product.png" alt="product" srcset=""><br>
+
+    <script>
+        const product = {
+                Name: 'Parker jotter Standerd CT Ball pen',
+                Color : 'Black',
+                price  : 270,
+                Rating : '4 stars',
+                mrp : 285,
+                description : 'Parker jotter standser CT ball pen with a comfortable and stylish design. The pen has a soft finish and is available in various colors like black, white, and silver.',
+                image : './images/product.png'
+        };
+
+
+        document.write("<b><br>Name of product is : </b>"+ product.Name)
+        document.write("<b><br>Name of product is : </b>"+ product.Color)
+        document.write("<b><br>Price of product is : </b>"+ product.price)
+        document.write("<b><br>Rating of product is : </b>"+ product.Rating)
+        document.write("<b><br> Mrp of the product is : </b>"+ product.mrp)
+        document.write("<b><br>Description of the product is : </b>"+ product.description)
+        // document.write("<br><img src="+product.image+" alt="+product.Name+">")
+
+        console.log(product);
+    </script>
+</body>
+</html>

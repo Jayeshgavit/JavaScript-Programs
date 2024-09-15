@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Datatype Demonstartion</title>
+    <script>
+            Student = {
+                name : 'Jayesh',
+                age : 22,
+                grade : 'A',
+                ispass : true,
+                marks : [60,70,80]
+            };
+
+            console.log(Student.name);
+            console.log(Student['age']);
+            
+    </script>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #e7e7e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accessing Object Properties in JavaScript</h1>
+
+    <p>In JavaScript, object properties can be accessed in two ways:</p>
+
+    <h2>1. Dot Notation</h2>
+    <p>Dot notation is the most common way to access properties of an object. It is straightforward and easy to read.</p>
+
+    <div class="example">
+        <h3>Example:</h3>
+        <code>
+            let Student = { name: 'Jayesh', age: 22, grade: 'A' }; <br>
+            console.log(Student.name); // Outputs: 'Jayesh'
+        </code>
+    </div>
+
+    <p>Here, we access the <code>name</code> property of the <code>Student</code> object using dot notation: <code>Student.name</code>.</p>
+
+    <h2>2. Bracket Notation</h2>
+    <p>Bracket notation is used when the property name is dynamic (e.g., stored in a variable) or contains special characters or spaces.</p>
+
+    <div class="example">
+        <h3>Example:</h3>
+        <code>
+            let Student = { name: 'Jayesh', age: 22, grade: 'A' }; <br>
+            console.log(Student['age']); // Outputs: 22
+        </code>
+    </div>
+
+    <p>Here, we use bracket notation to access the <code>age</code> property. In this case, the property name is passed as a string: <code>Student['age']</code>.</p>
+
+
+</body>
+</html>

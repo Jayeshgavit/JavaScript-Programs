@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+</head>
+<body>
+    <h2>Qs2. Create a const object called “profile” to store information shown in the picture.</h2><br>
+    <img src="./images/Profile.png" alt="profile" srcset=""><br>
+
+    <script>
+        const profile = {
+                Username : 'shradhakhapra',
+                Name : 'Shradha Khapra',
+                total_posts : 196,
+                followers : 569000,
+                following : 4,
+                id : '@shradhakhapra',
+                bio : 'Software Engineer at MS Corp.'
+
+        };
+
+        
+
+        document.write("<br><b>User NAme is : </b>"+ profile.Username);
+        document.write("<br><b>Full Name : </b>", profile.Name);
+        document.write("<br><b> Total Post on Inst : </b>", profile.total_posts);
+        document.write("<br><b>Followers : </b>", profile.followers);
+        document.write("<br><b>Followings : </b>", profile.following);
+        document.write("<br><b>User ID : </b>", profile.id);
+        document.write("<br><b>Bio : </b>", profile.bio);
+
+        console.log(profile);
+        console,log(JSON.stringify(profile));
+    </script>
+</body>
+</html>
