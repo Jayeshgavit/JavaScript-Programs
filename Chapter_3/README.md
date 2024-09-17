@@ -1,4 +1,4 @@
-# JavaScript Loops
+# JavaScript Loops And Strings
 
 ## Overview
 Loops in JavaScript allow you to repeat a block of code multiple times until a certain condition is met. JavaScript provides several types of loops, each suitable for different scenarios.
