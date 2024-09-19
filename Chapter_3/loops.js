@@ -20,3 +20,6 @@ for (var i = 1; i < 101; i++){
 
 
 
+for(var l = 1; l < 11; l++){
+    document.write(l + '<br/>');
+}
