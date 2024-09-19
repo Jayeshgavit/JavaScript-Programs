@@ -67,3 +67,47 @@ do{
     n1++;
 }while(n1 < 11);
 
+
+console.log("For-of Loop : ")
+
+let str = "Jayesh";
+
+for(let i of str){
+    console.log(i);
+}
+
+
+let numbers = [1, 2, 3, 4, 5, 6];
+console.log("Even Numbers : ");
+for (let i of numbers){
+    if (i % 2== 0){
+        console.log(i);
+    }
+}
+
+// finding size of string 
+
+console.log("Size of string : "+ str);
+size=0;
+for (let i of str){
+    size ++;
+}
+
+console.log(size);
+
+
+// for in loop
+
+console.log("For-in Loop : ")
+let student = {
+    name: "Jayesh",
+    age: 20,
+    city: "Pune"
+};
+
+for(let i in student){
+    console.log(i);
+}
+for(let i in student){
+    console.log("Keys id :  "+ i + ", and Value : ", student[i]);
+}

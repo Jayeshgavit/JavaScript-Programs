@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Q: 2.1</title>
+</head>
+<body>
+    <h2>Q1. Create a game where you start with any random game number. Ask the user to keep
+        guessing the game number until the user enters correct value.</h2>
+
+
+        <script>
+            var rnum = Math.floor(Math.random() * 100)+1;
+            console.log(rnum);
+            let num = prompt(" Enter the number : ");
+            let attempts = 0;
+        
+            while(num != rnum) {
+
+                num = prompt(" Wrong Geuss..! Enter the number Again: ");
+                console.log(num);
+                attempts++;
+                if(num > rnum) {
+                    alert("Too High!");
+                } else if(num < rnum) {
+                    alert("Too Low!");
+                }else{
+                    break; //
+                }
+            }
+
+            alert("Congratulations!!! You've guessed the number. It took you " + attempts + " attempts.");
+
+            
+           
+        </script>
+</body>
+</html>

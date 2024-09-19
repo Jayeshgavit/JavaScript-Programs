@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Q2</title>
+</head>
+<body>
+    <h2>Q1. Create a game where you start with any random game number. Ask the user to keep
+        guessing the game number until the user enters correct value.</h2>
+
+
+        <script>
+            var rnum = Math.floor(Math.random() * 100)+1;
+            console.log(rnum);
+            let num;
+
+            while(true){
+                num = prompt("Guess the Number : ")
+
+                if (rnum == num){
+                alert("Congratulations! You guessed the correct number.");
+                break;
+            }else if(rnum > num){
+                alert("Sorry, too low! icrese the number");
+            }else{
+                alert("Sorry, too high! decrease the number");
+            }
+            }
+           
+        </script>
+    
+</body>
+</html>
