@@ -49,3 +49,21 @@ while(n < 11){
     console.log(n +" x "+ t1 +": "+ n*t1);
     n++;
 }
+
+
+console.log(" do-while loop : ");
+var c = 0;
+
+do{
+    console.log(c);
+    c++;
+}while(c < 5 );
+
+
+
+var n1 = 1;
+do{
+    console.log(n1+ "x" + 5 +":"+ n1 * 5)
+    n1++;
+}while(n1 < 11);
+
