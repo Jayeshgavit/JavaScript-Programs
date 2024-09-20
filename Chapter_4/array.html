@@ -29,6 +29,10 @@
             console.log(arr2[i]);
         }
 
+        for(let index of arr){
+            console.log("Arr : "+index);
+        }
+
         // modification
         let arr3 = [1,2,3,4,5];
         arr3[0] = 11;
@@ -42,7 +46,7 @@
 
         document.write("<br/> Qs 1. For a given array with marks of students -> [85, 97, 44, 37, 76, 60] Find the average marks of the entire class. <br/>")
 
-        let marks = [65,78,89,45,86];
+        let marks = [85, 97, 44, 37, 76, 60]
         let len = marks.length;
         document.write("<br/> Length of array : "+ len);
         let sum = 0;
@@ -51,6 +55,55 @@
         }
         document.write("<br/> Sum of marks : ", sum);
         document.write("<br/> Average marks : ", sum / len);
+
+        document.write("<br/> <br/> Qs 2. For a given array with prices of 5 items -> [250, 645, 300, 900, 50]All items have an offer of 10% OFF on them. Change the array to store final price afterapplying offer <br/>")
+
+        arr = [250, 645, 300, 900, 50]
+        let offerarray = [];
+        for(i =0; i < arr.length; i++){
+            newval = (arr[i] * 0.90) ;
+            offerarray.push(newval);
+        }
+        document.write("<br/> Original Price: " + arr);
+        document.write("<br/> Price after applying 10% Offer: " + offerarray);
+
+
+        document.write("<br/><br/><b/> Array Methods : </b>");
+        let fruits = ['Apple', 'Banana', 'Orange', 'Grapes', 'Lichi', 'Pineapple'];
+
+        //push
+        fruits.push('Mango');
+        document.write("<br> After push : " + fruits);
+        console.log("After push : " + fruits);
+        
+        //pop 
+        fruits.pop();
+        document.write("<br> After pop : " + fruits);
+        console.log("After pop : " + fruits);
+
+        //toString()
+        document.write("<br> After toString() : " + fruits.toString());
+        console.log("After toString() : " + fruits.toString());
+
+        //concat
+
+        let fruits2 = ['Mango', 'Papaya', 'Pineapple'];
+        let newFruits = fruits.concat(fruits2);
+        document.write("<br> After concat : " + newFruits);
+        console.log("After concat : " + newFruits);
+
+        //splice(indexstart, noofdel, newvalues 22,34,22)
+        let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+        console.log(numbers.splice(2,2,33,44));
+        console.log(numbers);
+
+        //sortvaluse
+        console.log(numbers.sort());
+        console.log("Sort() : "+ numbers);
+        
+        //Rrverse
+        numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+        console.log(numbers.reverse());
     </script>
 </body>
 </html>
