@@ -109,4 +109,3 @@ JavaScript arrays come with a wide range of built-in methods to simplify common 
 
 - **`map()`**: Creates a new array with the results of calling a function on every element.
   ```javascript
-  let numbers = [1, 

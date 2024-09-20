@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Demo : </title>
+</head>
+<body>
+    <h2> Array Demo in JS</h2>
+    <br>
+    <script>
+        //create array
+        let arr = [1,2,3,'apple', true];
+        console.log(arr);
+
+        //using constructor
+        let arr2 = new Array('Apple', 'Banana', 'Grapes', 'Cherry');
+        console.log(arr2);
+
+        //acessing Array
+        console.log("Array - Access Individual elements :");
+        console.log(arr2[2]);
+        console.log(arr2[3]);
+        console.log(arr2[1]);
+
+        //access using loop
+        console.log("Access using Loop :");
+        for(let i =0; i < arr2.length; i++){
+            console.log(arr2[i]);
+        }
+
+        
+    </script>
+</body>
+</html>
