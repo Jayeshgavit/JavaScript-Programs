@@ -29,7 +29,28 @@
             console.log(arr2[i]);
         }
 
-        
+        // modification
+        let arr3 = [1,2,3,4,5];
+        arr3[0] = 11;
+        arr3[1] = 22;
+        arr3[2] = 33;
+        console.log("After modification of array : ", arr3);
+
+        // length of array
+        console.log("Length of array : "+ arr2.length);
+
+
+        document.write("<br/> Qs 1. For a given array with marks of students -> [85, 97, 44, 37, 76, 60] Find the average marks of the entire class. <br/>")
+
+        let marks = [65,78,89,45,86];
+        let len = marks.length;
+        document.write("<br/> Length of array : "+ len);
+        let sum = 0;
+        for(i = 0; i < marks.length; i++){
+            sum = sum + marks[i];
+        }
+        document.write("<br/> Sum of marks : ", sum);
+        document.write("<br/> Average marks : ", sum / len);
     </script>
 </body>
 </html>
