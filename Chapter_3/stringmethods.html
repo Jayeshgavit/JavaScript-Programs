@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h2>String Methods </h2><br>
+
+    <script>
+        let fname = "Jayesh";
+        let lname = " Gavit";
+
+        // str.toUpperCase()
+        console.log(" Name is : "+ fname.toUpperCase() + " Last Name is : "+ lname.toUpperCase());
+        document.write(" Name is : "+ fname.toUpperCase()+ " Last Name is : "+ lname.toUpperCase()); 
+
+        //str.toLowerCase() Methods 
+        console.log("Name is: "+ fname.toLowerCase() + " Last Name is : "+ lname.toLowerCase());
+        document.write("<br/>Name is: "+ fname.toLowerCase() + " Last Name is : "+ lname.toLowerCase());
+
+        //str.charAt(index)
+        let str = " Wlcome to Js  ";
+        console.log("Character at index 5 is: "+ str.charAt(5));
+        document.write("<br/>Character at index 5 is: "+ str.charAt(5) + " and Original string : "+ str);
+
+        //str.concat 
+        console.log("concat the fname and lname : "+ fname.concat( lname));
+        document.write("<br/>Concat the fname and lname : "+ fname.concat( lname));
+
+        //str.trim();
+        console.log("str.trim() Method : "+ str.trim());
+        document.write("str.trim() Method :"+ str.trim());
+
+        //str slice method
+        console.log(" str slice method : "+ str.slice(3,7));
+        document.write("<br/>Str slice method : "+ str.slice(3,7));
+
+        //str.replace()
+        console.log("str.replace() Method : "+ str.replace('Js', 'Python'));
+        document.write("<br/>str.replace() Method : "+ str.replace('Js', 'Python'));
+    </script>
+</body>
+</html>

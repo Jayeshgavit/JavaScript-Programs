@@ -51,3 +51,6 @@ document.write("Escaped String \\Hi\\' : ", str3, "<br/>");
 document.write("<br/><br/>Breaking Long Strings : <br/>");
 str1 = 'hi, hello, how its \ going on...';
 console.log(str1);
+
+console.log(str1[0])
+console.log(str1[5])
