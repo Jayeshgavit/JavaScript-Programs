@@ -12,13 +12,11 @@ A function is defined as a set of instructions that can be called upon to perfor
 ### 2. Syntax
 The syntax for defining a function varies by programming language. Below is the general structure in JavaScript:
 
-```javascript
+javascript
 function functionName(parameters) {
     // Code to be executed
     return value; // Optional
 }
-
-Certainly! Here’s a sample `README.md` for Chapter 5 that includes information related to functions in programming. You can modify it based on your specific content or needs.
 
 
 ### 3. Types of Functions
@@ -66,5 +64,3 @@ Functions are fundamental building blocks in programming, promoting code reuse a
 - [MDN Web Docs: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [W3Schools: JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
 ```
-
-Feel free to add more sections or modify the existing content to better fit your chapter!
