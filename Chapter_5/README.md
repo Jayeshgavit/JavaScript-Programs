@@ -66,5 +66,3 @@ Functions are fundamental building blocks in programming, promoting code reuse a
 - [MDN Web Docs: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [W3Schools: JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
 ```
-
-Feel free to add more sections or modify the existing content to better fit your chapter!
