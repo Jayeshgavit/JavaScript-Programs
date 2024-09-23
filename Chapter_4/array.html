@@ -95,15 +95,33 @@
         //splice(indexstart, noofdel, newvalues 22,34,22)
         let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
         console.log(numbers.splice(2,2,33,44));
-        console.log(numbers);
+        console.log("After splice method : ", numbers);
 
         //sortvaluse
         console.log(numbers.sort());
-        console.log("Sort() : "+ numbers);
+        new_array = numbers.sort((a,b)=> a-b);
+        console.log("Sort() : "+ new_array);
         
         //Rrverse
         numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
         console.log(numbers.reverse());
+
+
+        document.write("<br/> <br/> <b> Qs. Create an array to store companies -> “Bloomberg”,“Microsoft”,“Uber”,“Google”,“IBM”,“Netflix”a. Remove the first company from the arrayb. Remove Uber & Add Ola in its placec. Add Amazon at the end </b><br/>")
+
+
+        
+
+        arr =  [" Bloomberg ", " Microsoft ", " Uber ", " Google ", " IBM ", " Netflix "]
+        document.write("<br> Removing the first company from the array : "+ arr.shift())
+        document.write("<br> Array : ",arr)
+
+        document.write("<br> b. Remove Uber & Add Ola in its placec ",arr.splice(2,1,'Ola'));
+        document.write("<br> Array : ",arr)
+        
+        document.write("<br>c. Add Amazon at the end ");
+        document.write("<br> Array : ",arr.push("Amazon"))
+        document.write("<br> Array : ",arr)
     </script>
 </body>
 </html>
