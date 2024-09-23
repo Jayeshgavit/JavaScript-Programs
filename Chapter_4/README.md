@@ -1,8 +1,4 @@
-Sorry about that! Let me improve it for you.
 
-Here's a cleaner and more GitHub-style `README.md` format for a chapter on Arrays in JavaScript:
-
----
 
 # Arrays in JavaScript
 
