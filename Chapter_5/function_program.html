@@ -1,11 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Functions : </title>
 </head>
+
 <body>
-    <script src="func_js.js"></script>
+
+    <h2>Function in JavaScript</h2>
+    <p>A function is an independent block of code that performs a specific task, while a function expression is a way to
+        store functions in variables.</p>
+
+    <br>
+    <h3>Function Declaration and Call:</h3>
+    <p>
+        <code>
+            <pre>
+                function greet(name){
+                    document.write(`Hello ${name}`);
+                    console.log(" We are Learning JavaScript..! ");
+                }
+        
+                greet("John"); 
+            </pre>
+        </code>
+
+    </p>
+
+    <h3>Function Example:</h3>
+    <p>
+        <code>
+            <pre>
+            let a,b;
+            function calculator(a, b){
+                addi = a + b;
+                subt = a - b;
+                mul= a * b;
+                div = a / b;
+
+                console.log(" Addition of a and b is : ",addi);
+                console.log(" Subtraction of a and b is : ",subt);
+                console.log(" Multiplication of a and b is : ",mul);
+                console.log(" Division of a and b is : ",div);
+            }
+            </pre>
+        </code>
+    </p>
+    <p style="color: red;">[After 'return' keyword after code cannot be executed because function stop working after
+        return]</p>
+
+    <h2>Arrow Functions : Simple Example</h2>
+    <p>
+        <code>
+            <pre>
+                const sayHello = () => "Hello, World"
+                //calling Arrow function
+                console.log(sayHello());
+            </pre>
+        </code>
+    <H3>Example of one Arg Arrow Function : </H3>
+    <code>
+            <pre>
+                const square = num => num * num;
+                // calling function 
+                console.log(square(4));
+            </pre>
+        </code>
+    <h3>Examplefor two arguments</h3>
+    <code>
+            <pre>
+                const multiply = (a,b) => a * b;
+                console.log("Multiplication of a and b : ",multiply(5,2));
+
+                //or 
+
+                const multiply = (a,b) => {
+                    return a * b;
+                }
+                console.log("Multiplication of a and b : ",multiply(5,2));
+            </pre>
+        </code>
+    </p>
+
+    <h3>Qs. Create a function using the “function” keyword that takes a String as an argument & returns the number of
+        vowels in the string.</h3>
+    <p>
+        <code>
+                <pre>
+                    function countVowels(str) {
+                        let count = 0;
+                        for (i in str) {
+                            if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+                                count++;
+                            }
+                        }
+                        return count;
+            
+                    }
+                    console.log("Number of vowels in the string 'Hello World' is : ", countVowels('Hello World'));
+                </pre>
+            </code>
+    </p>
+    <h3>Using arrow function for counting vowels : </h3>
+    <p>
+        <code>
+                <pre>
+                    const countVowels2 = (str) => {
+                        let count1 = 0;
+                        for (i in str) {
+                            if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+                                count1++;
+                            }
+                        }
+                        return count1;
+                    };
+                    console.log("Number of vowels in the string 'Welcome to JS' using Arrow function : ", countVowels2('Welcome to JS'));  
+                </pre>
+            </code>
+    </p>
+    <script>
+        function greet(name) {
+            console.log(`Hello ${name}`);
+            console.log(" We are Learning JavaScript..! ");
+        }
+        greet("John");
+
+        let a, b;
+        function calculator(a, b) {
+            addi = a + b;
+            subt = a - b;
+            mul = a * b;
+            div = a / b;
+
+            console.log(" Addition of a and b is : ", addi);
+            console.log(" Subtraction of a and b is : ", subt);
+            console.log(" Multiplication of a and b is : ", mul);
+            console.log(" Division of a and b is : ", div);
+        }
+
+        calculator(5, 2);
+
+
+        //Arrow functions : simple
+
+        const sayHello = () => "Hello, World"
+        //calling Arrow function
+        console.log(sayHello());
+
+        //with one argument
+
+        const square = num => num * num;
+        // calling function 
+        console.log(square(4));
+
+        // Arroww function for multiplication
+        const multiply = (a, b) => a * b;
+        console.log("Multiplication of a and b : ", multiply(5, 2));
+
+
+        function countVowels(str) {
+            let count = 0;
+            for (i in str) {
+                if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+                    count++;
+                }
+            }
+            return count;
+
+        }
+        console.log("Number of vowels in the string 'Hello World' is : ", countVowels('Hello World'));
+
+        //Using arrow function for counting vowels  
+
+        const countVowels2 = (str) => {
+            let count1 = 0;
+            for (i in str) {
+                if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+                    count1++;
+                }
+            }
+            return count1;
+        };
+        console.log("Number of vowels in the string 'Welcome to JS' using Arrow function : ", countVowels2('Welcome to JS'));
+    </script>
 </body>
+
 </html>
