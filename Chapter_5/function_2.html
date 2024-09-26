@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foreach method</title>
+</head>
+
+<body>
+    <h2>forEach Method</h2>
+    <p>The forEach() method calls a function for each element in an array. <br>
+
+        The forEach() method is not executed for empty elements.</p><br>
+
+
+    <p>
+        <code>
+            <pre>
+                let fruits = ['Orange', 'Grapes', 'Banana'];
+                fruits.forEach(myfunction);
+                var text = "";
+
+                function myfunction(item, index) {
+                text += index + ": " + item ;
+             }
+              output <p id="demo"></p>
+            </pre>
+        </code>
+    </p>
+    <p>
+    <h3>Example 2: </h3>
+    <code>
+            <pre>
+                let number = [1,2,3,4,5,6,7,8,9,10,11];
+
+                number.forEach(function printval(val){
+                    console.log(val);
+                });
+
+                or
+
+                number.forEach( (val) =>{
+                    console.log(val);
+                });
+              <p id="demo1"></p>
+            </pre>
+        </code>
+    </p>
+
+    <p>
+    <h4>Q Find square of numbers present in a List :</h4>
+    <code>
+            <pre>
+                number = [2,4,6,8];
+
+                number.forEach((val) => {
+                console.log(val * val);
+                });
+            </pre>
+        </code>
+    </p>
+
+
+    <p>
+        <h3>Map Method : same as foreach only diff is return new Array :  </h3>
+        <code>
+            <pre>
+                let numbers = [1, 2, 3, 4, 5];
+                numbers.map((val) => {
+                    console.log( val * val);
+                });
+
+                or
+
+                let newnum = numbers.map((val) => val * val);
+                console.log( newnum );
+                
+                <p id="demo3"></p>
+            </pre>
+        </code>
+    </p>
+
+    
+    
+    
+    <P>
+        <h3> filter() method :  </h3>
+        <P>in JavaScript is used to create a new array containing elements that pass a certain condition specified by a callback function. This method does not modify the original array, but instead returns a new array with elements that satisfy the condition </P>
+        <CODE>
+            <pre>
+                let filterarr = number.filter((val)=> val % 2==0);
+                console.log(filterarr);
+        
+                let filterarr2 = number.filter((val) => val * val < 5);
+                console.log(filterarr2);
+            </pre>
+            <p class="demo4"></p>
+        </CODE>
+    </P>
+
+    <p>
+        <h3>Reduce() Method :</h3>
+        <p>
+            The reduce() method in JavaScript is used to process each element of an array and reduce the array to a single value. 
+        </p>
+        <code>
+            <pre>
+                syntaxt :
+                array.reduce(function(accumulator, currentValue, index, array) {
+                    // return the new accumulator value
+                }, initialValue);
+                
+            </pre>
+
+            <h3>Example 1</h3>
+            <pre>
+                let sumnum = [1,2,3,4,5,6,7,8,9,10,11];
+                let rssum ;
+                let sum = sumnum.reduce((result, val) => {
+                    return result + val;
+                });
+                console.log(sum);
+            <p id="demo5"></p>
+            </pre>
+        </code>
+    </p>
+    <script>
+        let text = "";
+        let fruits = ['Orange', 'Grapes', 'Banana'];
+        fruits.forEach(myfunction);
+
+
+        function myfunction(item, index) {
+            text += index + ": " + item + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+
+        let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+        number.forEach(function printval(val) {
+            console.log(val);
+        });
+
+
+        number.forEach((val) => console.log(val));
+
+        console.log("Find square of numbers present in a List : ")
+        number = [2, 4, 6, 8];
+
+        number.forEach((val) => {
+            console.log(val * val);
+        });
+
+
+        console.log("Map Method : same as foreach only diff is return new Array : ");
+
+        let numbers = [1, 2, 3, 4, 5];
+        numbers.map((val) => {
+            console.log( val * val);
+        });
+
+
+        let newnum = numbers.map((val) => val * val);
+        document.getElementById("demo3").innerHTML = newnum;
+        console.log( newnum );
+
+
+        console.log("fILTER METHOD : " );
+        number = [2,4,6,7];
+
+        let filterarr = number.filter((val)=> val % 2==0);
+        console.log(filterarr);
+
+        let filterarr2 = number.filter((val) => val * val < 5);
+        console.log(filterarr2);
+
+        // Assuming you want to display filterarr and filterarr2
+        document.getElementsByClassName("demo4")[0].innerHTML = filterarr + "<br>" + filterarr2;
+
+        console.log("Reduce Method : ")
+        console.log("Calculating sum of Natural number :");
+        let sumnum = [1,2,3,4,5,6,7,8,9,10,11];
+        let rssum ;
+        let sum = sumnum.reduce((result, val) => {
+            return result + val;
+        });
+        console.log(sum);
+        document.getElementById("demo5").innerHTML = sum;
+
+    </script>
+
+</body>
+
+</html>

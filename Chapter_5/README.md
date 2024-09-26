@@ -58,7 +58,7 @@ const add = (a, b) => a + b;
 ```
 
 
-
+.
 ## Further Reading
 - [MDN Web Docs: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [W3Schools: JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
