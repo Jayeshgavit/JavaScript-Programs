@@ -125,6 +125,22 @@
             </pre>
         </code>
     </p>
+    <p>
+        <h3>Example 2 : find greatest using reduce method </h3>
+        <code>
+            <pre>
+                let arr1 = [1,2,3,4,5,6,7];
+                const grt = arr1.reduce((result, val) => {
+                    return result > val ? result : val
+                });
+
+                console.log("greatest number : ", grt);
+
+                <p id="demo6"></p>
+            </pre>
+
+        </code>
+    </p>
     <script>
         let text = "";
         let fruits = ['Orange', 'Grapes', 'Banana'];
@@ -189,6 +205,15 @@
         console.log(sum);
         document.getElementById("demo5").innerHTML = sum;
 
+
+        console.log("Ex2 : find greatest using reduce method : ");
+        let arr1 = [1,2,3,4,5,6,7];
+        const grt = arr1.reduce((result, val) => {
+            return result > val ? result : val
+        });
+
+        console.log("greatest number : ", grt)
+        document.getElementById("demo6").innerHTML = "Gratest number is : "+grt;
     </script>
 
 </body>

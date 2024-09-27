@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Quetions</title>
+</head>
+<body>
+    <h3>Qs. We are given array of marks of students. Filter our of the marks of students that scored 80+.</h3>
+    <p>
+        <code>
+            <pre>
+                let marks = [78,90,93,95,80,99,94,87,99]
+
+                let newmarks_arr = marks.filter((val)=>{
+                    return val > 80;
+                });
+                <p id="ps-1"></p>
+            </pre>
+        </code>
+    </p>
+
+    <h3>Qs. Take a number n as input from user. Create an array of numbers from 1 to n.
+        Use the reduce method to calculate sum of all numbers in the array.
+        Use the reduce method to calculate product of all numbers in the array.</h3>
+
+        <p>
+            <code>
+                <pre>
+                    const num = prompt("Number of input Values : ");
+                    let arr = [];
+                    let count = 0;
+                    
+                    for(let i=1; i <=num; i++){
+                        arr[i-1] = i;
+                    }
+                    console.log("Array Values : "+ arr)
+                    let sum = arr.reduce((rs, val) => {
+                    return rs + val
+                    });
+
+                    let product = arr.reduce((rs, val) => {return rs * val});
+
+                    console.log("Sum of all arrays elements : "+ sum)
+                    console.log("Product of all arrays elements : "+ product)
+                    <p id="ps-2"></p>
+                </pre>
+            </code>
+        </p>
+
+    <script>
+
+        let marks = [78,90,93,95,80,99,94,87,99]
+
+        let newmarks_arr = marks.filter((val)=>{
+            return val > 80;
+        });
+        console.log(" Marks > 80 : "+ newmarks_arr);
+        document.getElementById("ps-1").innerHTML = "Marks of Student those : Marks  > 80+ :: "+newmarks_arr;
+
+
+        const num = prompt("Number of input Values : ");
+        let arr = [];
+        let count = 0;
+        
+        for(let i=1; i <=num; i++){
+            arr[i-1] = i;
+        }
+        console.log("Array Values : "+ arr)
+        let sum = arr.reduce((rs, val) => {
+           return rs + val
+        });
+
+        let product = arr.reduce((rs, val) => {return rs * val});
+
+        console.log("Sum of all arrays elements : "+ sum)
+        console.log("Product of all arrays elements : "+ product)
+        document.getElementById("ps-2").innerHTML = "Sum of all arrays elements : "+ sum + "<br>Product of all arrays elements : "+ product; 
+    </script>
+</body>
+</html>
