@@ -1,0 +1,20 @@
+
+body{
+    background-color: rgb(219, 204, 185);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#btn1{
+    background-color: blue;
+}
+#btn2{
+    background-color: red;
+}
+
+.btn{
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5px;
+    border-style: none;    
+}
