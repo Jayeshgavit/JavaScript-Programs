@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        font-family: 'Courier New', Courier, monospace;    
+        
+        }
+        .maindiv{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+            gap: 10px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            border: solid 1px rgb(13, 18, 20);
+            background: #7fc7cc;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Qs. Create a H2 heading element with text - “Hello JavaScript”
+        . Append “from Apna College students” to this text using JS.</h3> >><br>
+
+
+        <h2>Hello JavaScript</h2>
+
+
+        <p>
+            <h4>Problem code : </h4>
+            <code>
+                <pre>
+                    let text = " from Apna College students";
+                    let heading = document.querySelector('h2');
+                    heading.innerText = heading.innerText + text;
+                </pre>
+            </code>
+        </p>
+
+        <h3>Qs. Create 3 divs with common class name - “box”
+            . Access them & add some unique text to each
+            of them.</h3>
+            >><br>
+        <div class="maindiv">
+            <div class="box">Div-1</div>
+            <div class="box">Div- 2</div>
+            <div class="box">Div- 3</div>
+        </div>
+        <p>
+            <code>
+                <pre>
+                    let divs = document.querySelectorAll(".box");
+                    console.log("Box class : ",divs);
+                    console.dir(divs);
+
+                    divs[0].innerText = "Left SideBar"; 
+                    divs[1].innerText = "Right SideBar"; 
+                    divs[2].innerText = "Footer"; 
+
+                    or
+                    
+                    let idx = 1;
+
+                    for (div of divs){
+                        div.innerText = ` div of ${idx}`;
+                        idx++;
+                    }
+                </pre>
+            </code>
+        </p>
+</body>
+<script>
+    let text = " from Apna College students";
+    let heading = document.querySelector('h2');
+    heading.innerText = heading.innerText + text;
+
+    let divs = document.querySelectorAll(".box");
+    console.log("Box class : ",divs);
+    console.dir(divs);
+
+    // divs[0].innerText = "Left SideBar"; 
+    // divs[1].innerText = "Right SideBar"; 
+    // divs[2].innerText = "Footer"; 
+
+    let idx = 1;
+
+    for (div of divs){
+        div.innerText = ` div of ${idx}`;
+        idx++;
+    }
+</script>
+</html>
