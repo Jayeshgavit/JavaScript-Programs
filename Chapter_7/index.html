@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<style>
+    .navbarul{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        background: #000;
+        color: white;
+        height: 24px;
+        width: auto;
+        align-items: center;
+        
+    }
+</style>
+<body>
+    <h1> DOM Manipulation </h1>
+    <div id="container" class="box">
+        <p id="paragraph1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptas!</p><br>
+    <button id="addButton">Add New Element</button>
+    <h2 class="heading">List:</h2> 
+    <ul class="navbarul">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Me</li>
+    </ul>
+    </div>
+    
+
+    <h2>getAttribute Example : </h2>
+    <code>
+        <pre>
+            let divs = document.querySelector('div');
+            console.log(divs);
+
+            let id = divs.getAttribute('class');
+            console.log(id);
+
+            let p = document.querySelector('p');
+            let para = p.getAttribute('id');
+            console.log(para);
+        </pre>
+    </code>
+</body>
+<h2>setAttribute Example : </h2>
+<code>
+    <pre>
+        let newpara = p.setAttribute('id', 'para');
+        console.log(newpara);
+    </pre>
+</code>
+<script>
+    let divs = document.querySelector('div');
+    console.log(divs);
+
+    let id = divs.getAttribute('class');
+    console.log(id);
+
+    let p = document.querySelector('p');
+    let para = p.getAttribute('id');
+    console.log(para);
+
+    //setAttribute('attribute', 'new_value');
+    let newpara = p.setAttribute('id', 'para');
+    console.log(newpara);
+
+
+    //node.style
+
+    let navbarul = document.querySelector('.navbarul');
+    console.log(navbarul);
+
+    navbarul.style.backgroundColor = 'Orange';
+    navbarul.style.color = 'black';
+    navbarul.style.height = '32px';
+    navbarul.style.fontFamily = "'Courier New', Courier, monospace";
+
+</script>
+</html>
