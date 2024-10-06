@@ -54,6 +54,17 @@
         console.log(newpara);
     </pre>
 </code>
+
+<h2> Insert Element </h2>
+<p>2 steps i] create element </p>
+<code> const element = document.createElement('button')</code>
+<p>step ii] add element - find parent element then use below methods </p>
+<ul id="list">
+    <li>parent_element.append(element)</li>
+    <li>parent_element.prepend(element)</li>
+    <li>parent_element.before(element)</li>
+    <li>parent_element.after(element)</li>
+</ul>
 <script>
     let divs = document.querySelector('div');
     console.log(divs);
@@ -80,5 +91,29 @@
     navbarul.style.height = '32px';
     navbarul.style.fontFamily = "'Courier New', Courier, monospace";
 
+    //insert element
+    let ben = document.createElement('button');
+    ben.innerText = 'Click me';
+    console.log(ben);
+
+    // find parent ele
+    const parentele = document.querySelector('#list')
+    console.log(parentele);
+
+    parentele.append(ben);
+    // parentele.prepend(ben);
+    // parentele.after(ben);
+    // parentele.before(ben);
+
+    const heading = document.createElement('h1');
+    heading.innerText = 'Add method Before the ul element';
+    console.log(heading);
+
+    parentele.before(heading);
+    // parentele.after(heading);
+    heading.style.fontStyle = 'italic';
+
+    const para1 = document.querySelector("#para"); 
+    para1.remove();
 </script>
 </html>
