@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<style>
+    button{
+        background-color: blue;
+        color: white;
+    }
+    .box{
+        height: 100px;
+        width: 100PX;
+        background-color: blueviolet;
+        text-align: center;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <h1>Welcome to the Event Handler Page</h1>
+   
+    <p>onclick Event : </p><button onclick="console.log('Button Clickd');">Click Me</button>
+
+    <br> <p>ondblclick : </p><button ondblclick="console.log('Button Clicked'); alert('Hello!')">Click Me 2 times</button>
+
+    <br><p> onmouseover : </p>
+    <div class="box" onmouseover="console.log('inside div')" > this my div</div>
+    
+</body>
+<script>
+
+</script>
+</html>
