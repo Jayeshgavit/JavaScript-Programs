@@ -27,9 +27,23 @@
 
     <br><p> onmouseover : </p>
     <div class="box" onmouseover="console.log('inside div')" > this my div</div>
+
+    <br><p>Externeal event handling : </p>
+    <code>
+        <pre>
+            const btn = document.getElementById('btn1');
+            btn.onclick = () =>{
+                console.log("Button Clicked");
+            };
+        </pre>
+    </code><button class="btn" id="btn1">Click Here</button>
     
 </body>
 <script>
 
+    const btn = document.getElementById('btn1');
+    btn.onclick = () =>{
+        console.log("Button Clicked");
+    };
 </script>
 </html>
