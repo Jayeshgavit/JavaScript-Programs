@@ -37,6 +37,19 @@
             };
         </pre>
     </code><button class="btn" id="btn1">Click Here</button>
+
+    <br><br>
+    <p>Event Object : </p>
+    <code>
+        <pre>
+            const box = document.querySelector('.box');
+            // e is a event object which store deatils about event
+            box.onclick= (e) =>{
+                console.log(e);
+            };
+        </pre>
+        <p> <b>Output : </b> click { target: div.box, buttons: 0, clientX: 44, clientY: 366, layerX: 44, layerY: 366 }</p>
+    </code>
     
 </body>
 <script>
@@ -45,5 +58,16 @@
     btn.onclick = () =>{
         console.log("Button Clicked");
     };
+
+    const box = document.querySelector('.box');
+    
+    box.onclick= (e) =>{
+        console.log(e);
+        console.log(e.type);
+        console.log(e.target);
+    };
+    
+    
+
 </script>
 </html>
