@@ -50,7 +50,18 @@
         </pre>
         <p> <b>Output : </b> click { target: div.box, buttons: 0, clientX: 44, clientY: 366, layerX: 44, layerY: 366 }</p>
     </code>
-    
+    <br>
+    Event Listener : 
+    <code>
+        <pre>
+            const btn2 = document.getElementById('btn2');
+            btn2.addEventListener('click', () => {
+                console.log('Button clicked');
+            });
+        </pre>
+    </code>
+
+    <button class="btn" id="btn2">click me</button>
 </body>
 <script>
 
@@ -67,7 +78,12 @@
         console.log(e.target);
     };
     
+    const btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', () => {
+        console.log('Button clicked');
+    });
     
+   
 
 </script>
 </html>
