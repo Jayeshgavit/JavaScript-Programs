@@ -67,7 +67,11 @@
     Other events :
     <code>
         <pre>
+            const inputfield = document.getElementsByClassName('input-N')[0];
 
+            inputfield.addEventListener('keypress', () => {
+             console.log('Key Pressed');
+            });
         </pre>
     </code>
     <form action="">
@@ -107,11 +111,6 @@
     console.log('Key Pressed');
    });
    
-   const emailfield = document.getElementsByClassName('input-E')[0];
-
-   emailfield.addEventListener('kayup',() => {
-    console.log('Email Changed');
-   });
 
 
 </script>
