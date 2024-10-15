@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set q-1</title>
+</head>
+<style>
+    div{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+</style>
+<body>
+    <h3>Q Create a toggle button that changes the screen to dark-mode when clicked & light-mode
+        when clicked again.</h3> <br>
+    <div>
+            <button class="btn">Change Mode</button>
+    </div>
+
+    <code>
+        <br>
+        <br>
+        <h3>Code : </h3> 
+        <pre>
+            const btn = document.querySelector('.btn');
+            console.log(btn.innerHTML);
+            let mode = 'light';
+        
+            const body = document.querySelector('body');
+            btn.addEventListener('click', () =>{
+                console.log("Your trying to Change Mode...");
+        
+                if(mode== 'light'){
+                    body.style.backgroundColor = 'black';
+                    body.style.color = 'white';
+                    mode = 'black';
+                }else{
+                    body.style.backgroundColor = 'white';
+                    body.style.color = 'black';
+                    mode = 'light';
+                }
+            });
+        </pre>
+    </code>
+</body>
+<script>
+    const btn = document.querySelector('.btn');
+    console.log(btn.innerHTML);
+    
+    let mode = 'light';
+
+    const body = document.querySelector('body');
+    btn.addEventListener('click', () =>{
+        console.log("Your trying to Change Mode...");
+
+        if(mode== 'light'){
+            body.style.backgroundColor = 'black';
+            body.style.color = 'white';
+            mode = 'black';
+            console.log("Current Mode: " + mode);
+        }else{
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+            mode = 'light';
+            console.log("Current Mode: " + mode);
+        }
+    });
+
+</script>
+</html>
