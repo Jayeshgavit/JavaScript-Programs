@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .choices{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        
+    }
+    .btn{
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn:hover{
+        /* opacity: 0.5; */
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        transform: scale(1.1);
+    }
+
+    img{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: black;
+    }
+    
+    .score-board{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+    
+    .score-label{
+        font-size: 20px;
+    }
+    #comp-score,#user-score{
+        font-size: 22px;
+    }
+    .msg-container{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        margin-top: 20px;
+        color: white;
+       
+    }
+    #msg{
+        background-color: black;
+        display: inline;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+   
+</style>
+<body>
+    <div class="container">
+        <div class="choices">
+            <div  class="btn" id="rock"> <img src="./images/rock.png" alt="rock" srcset=""></div>
+           <div  class="btn" id="paper"><img src="./images/paper.png" alt="rock" srcset=""></div>
+            
+           <div class="btn" id="scissors"><img src="./images/scissors.png" alt="rock" srcset=""></div>
+           
+        </div>
+        <div class="score-board">
+            <div class="user-score">
+                <p id="user-score">0</p>
+                <p class="score-label">You</p>
+            </div>
+            <div class="computer-score">
+                <p id="comp-score">0</p>
+                <p class="score-label">Computer</p>
+            </div>
+        </div>
+
+
+        <div class="msg-container">
+            <p id="msg">  Play your Move  </p>
+        </div>
+        
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
