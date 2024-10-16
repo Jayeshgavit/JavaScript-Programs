@@ -4,9 +4,12 @@ let CompScore = 0;
 const choices = document.querySelectorAll('.btn');
 console.log(choices);
 
+const userScoreElem = document.getElementById('user-score');
+const compScoreElem = document.getElementById('comp-score');
+const msg = document.getElementById('msg');
 
 const drawGame = ()=>{
-    console.log(" Game Draw");
+    console.log(" Game Draw..!");
 };
 
 const genCompChoice = () => {
@@ -15,26 +18,44 @@ const genCompChoice = () => {
     return options[randomIndex];
 };
 
+const showWinner = (userWin, userChoice, compChoice) => {
+  if (userWin) {
+    UserScore++;
+    userScoreElem.innerText = UserScore;
+    msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
+    msg.style.backgroundColor = "green";
+  } else {
+    CompScore++;
+    compScoreElem.innerText = CompScore;
+    msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
+    msg.style.backgroundColor = "red";
+  }
+};
+
+
 const playGame = (userChoice) => {
     console.log('User Choice is : ', userChoice);
     let compChoice = genCompChoice();
-    console.log('Computer Choice is : ', compChoice);
+    console.log('Computer Choice is : ', drawGame(compChoice));
 
     if (userChoice === compChoice) {
-        resultDiv.innerHTML += '<br> It\'s a draw!';
-      }
-       else if (
-        (userChoice === 'rock' && compChoice === 'scissors') ||
-        (userChoice === 'scissors' && compChoice === 'paper') ||
-        (userChoice === 'paper' && compChoice === 'rock')
-      ) 
-      {
-        resultDiv.innerHTML += '<br> You win!';
+      //Draw Game
+      console.log(" Computer Choice is : ", drawGame());
+    } else {
+      let userWin = true;
+      if (userChoice === "rock") {
+        //scissors, paper
+        userWin = compChoice === "paper" ? false : true;
+      } else if (userChoice === "paper") {
+        //rock, scissors
+        userWin = compChoice === "scissors" ? false : true;
       } else {
-        resultDiv.innerHTML += '<br> Computer wins!';
+        //rock, paper
+        userWin = compChoice === "rock" ? false : true;
       }
-    
-};
+      showWinner(userWin, userChoice, compChoice);
+    }
+  };
 
 choices.forEach((choice) => {
 
