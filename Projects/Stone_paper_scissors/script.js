@@ -4,6 +4,7 @@ let CompScore = 0;
 const choices = document.querySelectorAll('.btn');
 console.log(choices);
 
+
 const drawGame = ()=>{
     console.log(" Game Draw");
 };
