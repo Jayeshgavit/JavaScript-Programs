@@ -6,6 +6,24 @@
     <title>Classes & Objects </title>
 </head>
 <body>
-    
+    <h2>Classes & Objects</h2>
+    <h3>JavaScript Object</h3>
+    <p>Object is a way to group related data and functions (known as methods) together. It's like a container that holds key-value pairs. Each key is a unique name, and its associated value can be any data type, like a string, number, array, or even another function.</p>
+
+    <br>
+    <code>
+        <pre>
+            const student = {
+                name : 'Jayesh Gavit',
+                marks: 85,
+                printMarks : function(){
+                    console.log(`Name: ${this.name}, Marks: ${this.marks}`);
+                }
+            };
+            console.log(student.printMarks());
+        </pre>
+        OUTPUT : Name: Jayesh Gavit, Marks: 85
+    </code>
 </body>
+<script src="script.js"></script>
 </html>
