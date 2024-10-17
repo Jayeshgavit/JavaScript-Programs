@@ -27,6 +27,9 @@ console.log(jayesh.calTax());
 
 class ToyotaVehi {
 
+    constructor(brand){
+        this.brand = brand;
+    };
     start(){
         console.log("Car started");
     };
@@ -49,3 +52,18 @@ let Hilux = new ToyotaVehi();
 Hilux.setBrand('Hilux');
 Hilux.start();
 Hilux.stop();
+
+
+class Tesla {
+
+    constructor(brand){
+        this.brand = brand;
+    };
+
+    start(){
+        console.log(` Tesls Model ${this.brand} car started`);
+    };
+};
+
+let ModelS = new Tesla('ModeS');
+ModelS.start();
