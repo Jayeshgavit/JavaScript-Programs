@@ -24,6 +24,27 @@
         </pre>
         OUTPUT : Name: Jayesh Gavit, Marks: 85
     </code>
+
+    <h3>Prototype</h3>
+    <p>object Can inherit properties/methods of another object using __proto__ properties </p>
+
+    <code>
+        <pre>
+            const jayesh = {
+                salary : 50000,
+            };
+            const emp = {
+                calTax(){
+                    console.log("tax rate of 10% is :", jayesh.salary * 0.10)
+                },
+            };
+    
+            jayesh.__proto__ = emp;
+
+            console.log(jayesh.calTax());
+        </pre>
+        OUTPUT : tax rate of 10% is : 5000
+    </code>
 </body>
 <script src="script.js"></script>
 </html>
