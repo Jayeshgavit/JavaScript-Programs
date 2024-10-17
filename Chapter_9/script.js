@@ -56,14 +56,17 @@ Hilux.stop();
 
 class Tesla {
 
-    constructor(brand){
+    constructor(brand, mileage){
         this.brand = brand;
+        this.mileage = mileage;
     };
 
     start(){
         console.log(` Tesls Model ${this.brand} car started`);
     };
+    info(){
+        console.log(` Tesls Model ${this.brand} mileage is ${this.mileage}`)};
 };
 
-let ModelS = new Tesla('ModeS');
-ModelS.start();
+let ModelS = new Tesla('ModelS',12);
+ModelS.info();
