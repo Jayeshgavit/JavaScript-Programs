@@ -1,3 +1,4 @@
+//Objects
 const student = {
     name : 'Jayesh Gavit',
     marks: 85,
@@ -8,7 +9,7 @@ const student = {
 
 console.log(student.printMarks());
 
-
+//prototype.
 const jayesh = {
     salary : 50000,
 };
@@ -21,3 +22,30 @@ const emp = {
 
 jayesh.__proto__ = emp;
 console.log(jayesh.calTax());
+
+//Classes
+
+class ToyotaVehi {
+
+    start(){
+        console.log("Car started");
+    };
+
+    stop(){
+        console.log("Car stopped");
+    };
+    setBrand(brand){
+        this.brand = brand;
+    }
+}
+
+//instance / objects
+let Fortuner = new ToyotaVehi();
+Fortuner.setBrand('Fortuner');
+Fortuner.start();
+Fortuner.stop();
+
+let Hilux = new ToyotaVehi();
+Hilux.setBrand('Hilux');
+Hilux.start();
+Hilux.stop();

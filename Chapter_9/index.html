@@ -26,7 +26,7 @@
     </code>
 
     <h3>Prototype</h3>
-    <p>object Can inherit properties/methods of another object using __proto__ properties </p>
+    <p>Object Can inherit properties/methods of another object using __proto__ properties </p>
 
     <code>
         <pre>
@@ -44,6 +44,50 @@
             console.log(jayesh.calTax());
         </pre>
         OUTPUT : tax rate of 10% is : 5000
+    </code>
+
+    <h3> Classes in JS </h3>
+    <p>
+        <b>Definition:</b> A class in JavaScript is a blueprint for creating objects. It allows you to define properties and methods in a structured way. <br><br>
+
+        <b>Syntax:</b> Classes are defined using the class keyword.
+        <br><br>
+
+        <b>Constructor: </b>The constructor() method is a special method for creating and initializing an object created with a class. <br><br>
+
+       <b>Methods:</b>  Functions inside classes are called methods. You can define methods inside a class, and all instances of the class can use them. <br><br>
+
+        <b>Instantiation: </b> You create new instances of a class using the new keyword.  <br><br>
+
+    </p><br>
+    <code>
+        <pre>
+            class ToyotaVehi {
+
+                start(){
+                    console.log("Car started");
+                };
+            
+                stop(){
+                    console.log("Car stopped");
+                };
+                setBrand(brand){
+                    this.brand = brand;
+                }
+            }
+            
+            //instance / objects
+            let Fortuner = new ToyotaVehi();
+            Fortuner.setBrand('Fortuner');
+            Fortuner.start();
+            Fortuner.stop();
+            
+            let Hilux = new ToyotaVehi();
+            Hilux.setBrand('Hilux');
+            Hilux.start();
+            Hilux.stop();
+        </pre>
+        <b>OUTPUT :</b> Car started, Car stopped, Car started, Car stopped
     </code>
 </body>
 <script src="script.js"></script>
