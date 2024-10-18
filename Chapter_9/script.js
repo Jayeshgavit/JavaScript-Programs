@@ -73,7 +73,7 @@ ModelS.info();
 
 
 //inheritance
-class person{
+/* class person{
     constructor(name, age, address, salary){
         this.name = name;
         this.age = age;
@@ -93,5 +93,59 @@ class engineer extends person{
 let john = new engineer('John Doe', 30, '123 Main St', 50000);
 
 john.desc();
+*/
 
 //super keyword and constructor
+class person {
+
+    constructor(name){
+        this.spacies = 'homo sepiens';
+        this.name = name;
+    };
+
+    eat(){
+        console.log('eating');
+    }
+    sleep(){
+        console.log("sleep");
+    }
+
+    work(){
+        console.log("nothing to do..!");
+    }
+}
+
+class engineer extends person{
+    
+    constructor(branch,name){
+        super(name);
+        this.branch = branch
+    }
+    work(){
+        console.log("build something...");
+    }
+
+    printinfo(){
+        console.log(`Speciase name is :  ${this.spacies} and name is : ${this.name}` )
+    }
+}
+
+// class doctor extends person{
+
+//     work(){
+//         console.log("dignosys..!");
+//     }
+
+// }
+
+
+let john = new engineer('chemical', 'John');
+john.eat();
+john.work();
+john.printinfo();
+
+
+let Jayesh = new engineer('chemical', 'Jayesh');
+Jayesh.eat();
+Jayesh.work();
+Jayesh.printinfo();
