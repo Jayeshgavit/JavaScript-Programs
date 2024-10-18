@@ -70,3 +70,28 @@ class Tesla {
 
 let ModelS = new Tesla('ModelS',12);
 ModelS.info();
+
+
+//inheritance
+class person{
+    constructor(name, age, address, salary){
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.salary = salary;
+    }
+
+    desc(){
+        console.log(`Name: ${this.name}, Age: ${this.age}, Address: ${this.address}, Salary: ${this.salary}`);
+    }
+}
+
+class engineer extends person{
+    
+}
+
+let john = new engineer('John Doe', 30, '123 Main St', 50000);
+
+john.desc();
+
+//super keyword and constructor
