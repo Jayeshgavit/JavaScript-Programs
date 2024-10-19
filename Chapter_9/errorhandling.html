@@ -25,7 +25,20 @@
     <h3> Throw Error custom : throw</h3>
     <code>
         <pre>
-
+            function checkAge(age){
+                if(age < 18){
+                    throw new Error(" you must be 18 years old");
+        
+                }
+                return 'access granted';
+            }
+        
+            try{
+                let result = checkAge(12);
+                console.log(result);
+            }catch(err){
+                console.log(err.message);
+            }
         </pre>
     </code>
 </body>
