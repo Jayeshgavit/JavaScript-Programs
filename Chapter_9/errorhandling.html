@@ -41,6 +41,24 @@
             }
         </pre>
     </code>
+
+    <h3>finally Block : </h3>
+    <code>
+        <pre>
+            try{
+                let str = 'Hello! Bro!!';
+                console.log(str.toUpperCase());
+        
+            }
+            catch(err1){
+        
+                console.log("error is :" + err1.message);
+            }
+            finally{
+                console.log('This block will always run.');
+            }
+        </pre>
+    </code>
 </body>
 <script>
     
@@ -52,7 +70,7 @@
         console.log('An error occurred : ', error.message);
     }
 
-
+//throw custom error message
     function checkAge(age){
         if(age < 18){
             throw new Error(" you must be 18 years old");
@@ -67,6 +85,21 @@
     }catch(err){
         console.log(err.message);
     }
-    
+
+//finally block
+
+    try{
+        let str = 'Hello! Bro!!';
+        console.log(str.toUpperCase());
+
+    }
+    catch(err1){
+
+        console.log("error is :" + err1.message);
+    }
+    finally{
+        console.log('This block will always run.');
+    }
+
 </script>
 </html>
