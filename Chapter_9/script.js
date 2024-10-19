@@ -97,7 +97,6 @@ john.desc();
 
 //super keyword and constructor
 class person {
-
     constructor(name){
         this.spacies = 'homo sepiens';
         this.name = name;
@@ -118,7 +117,7 @@ class person {
 class engineer extends person{
     
     constructor(branch,name){
-        super(name);
+        super(name); // invoke the parent constructor
         this.branch = branch
     }
     work(){

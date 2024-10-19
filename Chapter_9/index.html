@@ -130,6 +130,61 @@
             john.desc();
         </pre>
     </code>
+    <h3>super keyword </h3>
+    <p>used to call the parent constructor to access parent methods and properties, you must have to use <b>super(properties_name)</b> which allow access </p>
+    <code>
+        <pre>
+            class person {
+                constructor(name){
+                    this.spacies = 'homo sepiens';
+                    this.name = name;
+                };
+                eat(){
+                    console.log('eating');
+                }
+                sleep(){
+                    console.log("sleep");
+                }
+                work(){
+                    console.log("nothing to do..!");
+                }
+            }
+            
+            class engineer extends person{
+                constructor(branch,name){
+                    super(name); // invoke the parent constructor
+                    this.branch = branch
+                }
+                work(){
+                    console.log("build something...");
+                }
+            
+                printinfo(){
+                    console.log(`Speciase name is :  ${this.spacies} and name is : ${this.name}` )
+                }
+            }
+            
+            let john = new engineer('chemical', 'John');
+            john.eat();
+            john.work();
+            john.printinfo();
+            
+            let Jayesh = new engineer('chemical', 'Jayesh');
+            Jayesh.eat();
+            Jayesh.work();
+            Jayesh.printinfo();
+        </pre>
+        <b>OUTPUT : </b>
+        <pre>
+            eating 
+            build something... 
+            Speciase name is :  homo sepiens and name is : John 
+
+            eating 
+            build something... 
+            Speciase name is :  homo sepiens and name is : Jayesh
+        </pre>    
+    </code>
 </body>
 <script src="script.js"></script>
 </html>
