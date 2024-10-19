@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Error Handling</h3>
+    <h4>Example with try and catch block : </h4>
+    <code>
+        <pre>
+            try{
+                rs = 5 / 0;
+                console.log("result is :", rs);
+            }
+            catch(error){
+                consolelog('An error occurred : ', error.message);
+            }
+            
+        </pre>
+    </code>
+
+    <h3> Throw Error custom : throw</h3>
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+</body>
+<script>
+    
+    try{
+        rs = 5 / t;
+        console.log("result is :", rs);
+    }
+    catch(error){
+        console.log('An error occurred : ', error.message);
+    }
+
+
+    function checkAge(age){
+        if(age < 18){
+            throw new Error(" you must be 18 years old");
+
+        }
+        return 'access granted';
+    }
+
+    try{
+        let result = checkAge(12);
+        console.log(result);
+    }catch(err){
+        console.log(err.message);
+    }
+    
+</script>
+</html>
