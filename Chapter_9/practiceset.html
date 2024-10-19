@@ -7,15 +7,65 @@
 </head>
 <body>
     
-    <h3>Q You are creating a website for your college. Create a class User with 2 properties, name &
+    <h3>Qs1. You are creating a website for your college. Create a class User with 2 properties, name &
         email. It also has a method called viewData( ) that allows user to view website data.</h3>
 
     <code>
         <pre>
+        
+        let data = 'This is information about';
 
-        </pre>
+        class user{
+        
+            constructor(name, email){
+                this.name = name;
+                this.email = email;
+            };
+
+            viewData(){
+                console.log(` Name is ${this.name} and Email is ${this.email}`);
+                console.log('Data is:', data, ' : ', this.name );
+            };
+        }
+
+        let Jayesh = new user('Jayesh', 'gavitjayesh08@gmail.com');
+
+        Jayesh.viewData();
+                </pre>
+        <b>Output : </b><br>
+        Name is Jayesh and Email is gavitjayesh08@gmail.com <br>
+        Data is: This is information about  :  Jayesh
     </code>
-    
+
+    <h3>
+        Qs2. Create a new class called Admin which inherits from User. Add a new method called editData to Admin that allows it to edit website data.
+    </h3>
+    <code>
+        <pre>
+            
+        class admin extends user{
+            constructor(name, email){
+                super(name, email);
+                this.role = 'Admin';
+            }
+            editData(){
+                console.log('Name is : ',this.name, 'and Email is : ',this.email);
+                console.log('Roll is :' , this.role);
+                console.log('Editing data');
+                data = 'This is updated information about';
+                console.log('Data updated:', data);
+            }
+        }
+
+        let Gavit = new admin('Gavit', 'gavit@gmail.com');
+        Gavit.editData();
+        </pre>
+    <b>Output : </b><br>
+    Name is :  Gavit and Email is :  gavit@gmail.com <br>
+    Roll is : Admin <br>
+    Editing data <br>
+    Data updated: This is updated information about <br>
+    </code>
 </body>
 <script src="scriptps.js"></script>
 </html>
