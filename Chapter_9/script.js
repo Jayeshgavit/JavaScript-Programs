@@ -121,6 +121,7 @@ class engineer extends person{
         this.branch = branch
     }
     work(){
+        super.eat(); // invoke the parent method 
         console.log("build something...");
     }
 
