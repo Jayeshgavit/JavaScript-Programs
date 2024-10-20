@@ -18,9 +18,24 @@
         </pre>
         <b> Output : </b><br>
         This will run immediately <br>
-I will run after 5 seconds <br>
+    I will run after 5 seconds <br>
 
         
+    </code>
+
+    <h3>callBack function : </h3>
+    <code>
+        <pre> 
+        function Sum(a,b){
+            console.log(`sum of ${a} + ${b} is : ${a+b}`);
+        }
+
+        function calculator(a,b,callBack){
+            callBack(a,b);
+        }
+
+        calculator(5,10,Sum);
+        </pre>
     </code>
 </body>
 <script src="script.js"></script>
