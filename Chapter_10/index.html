@@ -37,6 +37,43 @@
         calculator(5,10,Sum);
         </pre>
     </code>
+
+    <h4>Example : </h4>
+    <code>
+        <pre>
+            function getData(dataId){
+                setTimeout(()=>{
+                    confirm.log('data ',dataId);
+                },9000);
+            }
+            getData(256);
+        </pre>
+    </code>
+
+    <h4>execute multiple callback function with delayes : </h4>
+    <p>You can get multiple data with delayes (ex-1 ---> 2sec ex-2 --> ex-3 2sec)</p>
+    <code>
+        <pre>
+            function getData(dataId,getNextData){
+                setTimeout(()=>{
+                    console.log('data ',dataId);
+                    getNextData();
+                },9000);
+            }
+            // getData(257, ()=>{
+            //     getData(512);
+            // });
+            
+            //multiple delayes
+            getData(1, ()=>{
+                getData(2,()=>{
+                    getData(3, ()=>{
+                        getData(4);
+                    })
+                });
+            });
+        </pre>
+    </code>
 </body>
 <script src="script.js"></script>
 </html>
