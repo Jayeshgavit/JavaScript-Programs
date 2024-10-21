@@ -30,7 +30,7 @@ getData(256);
 
 
 //indidual delayes 
-function getData(dataId,getNextData){
+function getData1(dataId,getNextData){
     setTimeout(()=>{
         console.log('data ',dataId);
         getNextData();
@@ -41,10 +41,10 @@ function getData(dataId,getNextData){
 // });
 
 //multiple delayes
-getData(1, ()=>{
-    getData(2,()=>{
-        getData(3, ()=>{
-            getData(4);
+getData1(1, ()=>{
+    getData1(2,()=>{
+        getData1(3, ()=>{
+            getData1(4);
         })
     });
 });
