@@ -48,3 +48,12 @@ getData1(1, ()=>{
         })
     });
 });
+
+// promises
+//is an object for eventual completion of task
+
+let promise = new Promises(resove,reject => {
+    console.log('Promises');
+    resolve('success');
+    // reject('error');
+});
