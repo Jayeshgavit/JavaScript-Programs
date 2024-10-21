@@ -7,6 +7,32 @@
 </head>
 <body>
     <h3>Promises</h3>
-    
+    <p>solve callback hell problem</p>
+    <code>
+        <pre>
+
+        </pre>
+    </code>
 </body>
+<script>
+    let promise = new Promise((resolve,reject)=>{
+        console.log("This is a promise");
+        resolve('Successful');
+        reject('Failed');
+    });
+
+    function getData(dataId){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log(`Data for id: ${dataId}`);
+                if(dataId > 5){
+                    resolve('Data for id 12');
+                }else {
+                    reject('Data not found for id 12');
+                }
+            }, 2000);
+        });
+    }
+    getData(12)
+</script>
 </html>
