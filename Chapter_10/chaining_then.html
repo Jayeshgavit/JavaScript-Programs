@@ -7,13 +7,30 @@
 
     <style>
         .output {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #f7f7f7 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    color: #444;
+    text-align: center; /* Centers the image horizontally */
+}
+
+.output img {
+    max-width: 90%; /* Responsive image with some margin */
+    height: auto;   /* Maintains aspect ratio */
+    border: none;   /* Removes any border for a clean look */
+    border-radius: 8px;  /* Smooth rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds hover effect */
+}
+
+.output img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
     </style>
   </head>
   <body>
@@ -53,7 +70,9 @@
                 });
             });
             */
-        
+            
+            or
+            
            asyncFunc1().then((res)=>{
                 console.log(res);
                 
@@ -63,8 +82,37 @@
                 });
             });
         </pre>
+        <h5>Output : </h5>
         <div class="output">
             <img src="./images/img1.png" alt="" srcset="">
+        </div>
+    </code>
+    <h3>Actual Chaining :</h3>
+    <code>
+      <pre>
+        function getData(dataId){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    console.log('Data : ', dataId);
+                    resolve('Success');
+                },4000)
+            });
+        }
+    
+        getData(1)
+        .then((res) => {
+    
+            return getData(2);
+    
+        }).then((res) => {
+                return getData(3);     
+        }).then((res) => {
+            console.log('All data fetched successfully',res);
+        });
+        </pre>
+        <h5>Output : </h5>
+        <div class="output">
+            <img src="./images/img2.png" alt="" srcset="">
         </div>
     </code>
   </body>
@@ -100,7 +148,7 @@
         });
     });
     */
-
+/*
     asyncFunc1().then((res) => {
       console.log(res);
 
@@ -108,6 +156,28 @@
       asyncFunc2().then((res) => {
         console.log(res);
       });
+    });
+*/
+
+
+    function getData(dataId){
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                console.log('Data : ', dataId);
+                resolve('Success');
+            },4000)
+        });
+    }
+
+    getData(1)
+    .then((res) => {
+
+        return getData(2);
+
+    }).then((res) => {
+            return getData(3);     
+    }).then((res) => {
+        console.log('All data fetched successfully',res);
     });
   </script>
 </html>
