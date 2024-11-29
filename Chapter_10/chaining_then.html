@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chaining then method :</title>
 
     <style>
         .output {
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #f0f0f0 0%, #f7f7f7 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-    color: #444;
-    text-align: center; /* Centers the image horizontally */
-}
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #f7f7f7 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* Soft shadow effect */
+            color: #444;
+            text-align: center;
+            /* Centers the image horizontally */
+        }
 
-.output img {
-    max-width: 90%; /* Responsive image with some margin */
-    height: auto;   /* Maintains aspect ratio */
-    border: none;   /* Removes any border for a clean look */
-    border-radius: 8px;  /* Smooth rounded corners */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds hover effect */
-}
+        .output img {
+            max-width: 90%;
+            /* Responsive image with some margin */
+            height: auto;
+            /* Maintains aspect ratio */
+            border: none;
+            /* Removes any border for a clean look */
+            border-radius: 8px;
+            /* Smooth rounded corners */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* Adds hover effect */
+        }
 
-.output img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-
+        .output img:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow on hover */
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <h3>Chaining then :</h3>
     <code>
       <pre>
@@ -115,24 +124,82 @@
             <img src="./images/img2.png" alt="" srcset="">
         </div>
     </code>
-  </body>
-  <script>
+
+    <h3>Bank Transaction Process with Error Handling</h3>
+    <code>
+        <pre>
+            function checkBalance(accountId) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log(`Checking balance for Account ${accountId}`);
+                        resolve('Balance checked');
+                    }, 3000); // Time taken to check balance
+                });
+            }
+            
+            function transferMoney(amount) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (amount > 1000) {
+                            reject('Insufficient funds for the transfer');  // Simulating failure
+                        } else {
+                            console.log(`Transferring money: $${amount}`);
+                            resolve('Money transferred');
+                        }
+                    }, 2000); // Time taken to transfer money
+                });
+            }
+            
+            function sendConfirmation() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log('Sending confirmation...');
+                        resolve('Confirmation sent');
+                    }, 1000); // Time taken to send confirmation
+                });
+            }
+            
+            // Using Promise chain with error handling
+            
+            checkBalance(12345) // First step: Check balance
+                .then((res) => {
+                    return transferMoney(1500); // Simulate failure: Amount is too high
+                })
+                .then((res) => {
+                    return sendConfirmation(); // Third step: Send confirmation
+                })
+                .then((res) => {
+                    console.log('Transaction completed successfully!');
+                })
+                .catch((err) => {
+                    // This will handle any failure in the promise chain
+                    console.log('Transaction failed:', err);
+                });
+            
+        </pre>
+        <h5>Output : </h5>
+        <div class="output">
+            <img src="./images/img3.png" alt="" srcset="">
+        </div>
+    </code>
+</body>
+<script>
     function asyncFunc1() {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log("data 1 ");
-          resolve("Async function 1 successful");
-        }, 4000);
-      });
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("data 1 ");
+                resolve("Async function 1 successful");
+            }, 4000);
+        });
     }
 
     function asyncFunc2() {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log("data 2 ");
-          resolve("Async function 2 successful");
-        }, 4000);
-      });
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("data 2 ");
+                resolve("Async function 2 successful");
+            }, 4000);
+        });
     }
 
     /*
@@ -148,36 +215,89 @@
         });
     });
     */
-/*
-    asyncFunc1().then((res) => {
-      console.log(res);
+    /*
+        asyncFunc1().then((res) => {
+          console.log(res);
+    
+          console.log("fetching Data 2...");
+          asyncFunc2().then((res) => {
+            console.log(res);
+          });
+        });
+    */
 
-      console.log("fetching Data 2...");
-      asyncFunc2().then((res) => {
-        console.log(res);
-      });
-    });
-*/
 
-
-    function getData(dataId){
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
+    function getData(dataId) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
                 console.log('Data : ', dataId);
                 resolve('Success');
-            },4000)
+            }, 2000)
         });
     }
 
     getData(1)
-    .then((res) => {
+        .then((res) => {
 
-        return getData(2);
+            return getData(2);
 
-    }).then((res) => {
-            return getData(3);     
-    }).then((res) => {
-        console.log('All data fetched successfully',res);
-    });
-  </script>
+        }).then((res) => {
+            return getData(3);
+        }).then((res) => {
+            console.log('All data fetched successfully', res);
+        });
+
+
+
+            //Bank Transaction Process with Error Handling
+            function checkBalance(accountId) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log(`Checking balance for Account ${accountId}`);
+                        resolve('Balance checked');
+                    }, 8000); // Time taken to check balance
+                });
+            }
+
+            function transferMoney(amount) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (amount > 1000) {
+                            reject('Insufficient funds for the transfer');  // Simulating failure
+                        } else {
+                            console.log(`Transferring money: $${amount}`);
+                            resolve('Money transferred');
+                        }
+                    }, 9000); // Time taken to transfer money
+                });
+            }
+
+            function sendConfirmation() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log('Sending confirmation...');
+                        resolve('Confirmation sent');
+                    }, 10000); // Time taken to send confirmation
+                });
+            }
+
+            // Using Promise chain with error handling
+
+            checkBalance(12345) // First step: Check balance
+                .then((res) => {
+                    return transferMoney(1500); // Simulate failure: Amount is too high
+                })
+                .then((res) => {
+                    return sendConfirmation(); // Third step: Send confirmation
+                })
+                .then((res) => {
+                    console.log('Transaction completed successfully!');
+                })
+                .catch((err) => {
+                    // This will handle any failure in the promise chain
+                    console.log('Transaction failed:', err);
+                });
+
+</script>
+
 </html>

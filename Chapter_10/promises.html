@@ -85,8 +85,14 @@
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           console.log("This is a promise1");
-          //resolve('Successful');
-          reject("Failed");
+          const sucess = true;
+          if (sucess){
+            resolve('Successful');
+          }else{
+            
+            reject("Failed");
+          }
+         
         }, 1000);
       });
     };
