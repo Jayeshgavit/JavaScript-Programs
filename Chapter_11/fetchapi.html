@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+</head>
+
+<body>
+    <h3>Fetch API</h3>
+    <code>
+        <pre>
+            let URL = "https://cat-fact.herokuapp.com/facts"; 
+
+            let fetchdata = async () => {
+                try {
+                    console.log("Fetching data...");
+                    let response = await fetch(URL); 
+                    if (!response.ok) { 
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    let data = await response.json(); 
+                
+                    console.log("Fetched Data:", data); 
+                } catch (error) {
+                    console.error("Error fetching data:", error); 
+                }
+            }
+
+        </pre>
+        <button onclick="fetchdata()">Fetch Cat Facts</button>
+    </code>
+
+    <code>
+        <pre>
+            let fetchdata2 = async () => {
+
+                console.log("Fetching  response1...");
+                let response1 = await fetch(URL);
+                console.log(" fetched response1 data:", response1.status);
+                let data = await response1.json();
+                console.log(" Data response 1 :", data);
+                console.log(" Data response 1 :", data[0].text);
+                console.log(" Data response 1 :", data[1].text);
+            }
+        </pre>
+        <button onclick="fetchdata2()"> response1 </button>
+        <p id="para"></p>
+    </code>
+
+</body>
+<script>
+    let URL = "https://cat-fact.herokuapp.com/facts";
+    let para = document.getElementById('para');
+
+    let fetchdata = async () => {
+        try {
+            console.log("Fetching data...");
+            let response = await fetch(URL);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            let data = await response.json();
+
+            console.log("Fetched Data:", data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    }
+
+
+    let fetchdata2 = async () => {
+
+        console.log("Fetching  response1...");
+        let response1 = await fetch(URL);
+        console.log(" fetched response1 data:", response1.status);
+        console.log(" Data response 1 :", response1);
+
+        let data = await response1.json();
+        console.log(" Data response 1 :", data);
+        console.log(" Data response 1 :", data[0].text);
+        console.log(" Data response 1 :", data[1].text);
+
+
+        for (let i = 0; i < data.length; i++) {
+            para.innerHTML += data[i].text + "<br><hr>";
+        }
+    }
+
+
+
+</script>
+
+</html>
