@@ -130,8 +130,7 @@
 </head>
 
 <body>
-    <h1>Currency Converter</h1>
-    <!-- Navbar -->
+ 
     <ul>
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About me</a></li>
@@ -143,28 +142,22 @@
     <section id="home">
         <h2>Currency Converter</h2>
         <div id="icons">
-            <img src="https://flagsapi.com/US/shiny/64.png" style="width: 50px; height: 50px;">
+            <img src="https://flagsapi.com/US/shiny/64.png" style="width: 50px; height: 50px;" class="flag1">
             <i class="fa-solid fa-right-left"></i>
-            <img src="https://flagsapi.com/IN/shiny/64.png" style="width: 50px; height: 50px;">
+            <img src="https://flagsapi.com/IN/shiny/64.png" style="width: 50px; height: 50px; " class="flag2">
         </div>
+        <div class="dropdown">
+            <input type="number" id="amount" placeholder="Amount" value="amount" class="input"/>
 
-        <input type="number" id="amount" placeholder="Amount" />
-
-        <select id="currency-from">
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="INR">INR</option>
-            <option value="GBP">GBP</option>
-        </select>
-        <span>to</span>
-        <select id="currency-to">
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="INR">INR</option>
-            <option value="GBP">GBP</option>
-        </select>
-        <button class="btn">Convert</button>
-        <p id="result">Converted Amount: </p>
+            <select id="fromselect" class="fromselect" name="from"> </select>
+            <span>to</span>
+            <select id="toselect" class="toselect" name="to"></select>
+    
+    
+            <button class="btn" id="btn1">Convert</button>
+            <div class="msg">1USD = 80INR</div>
+        </div>
+       
     </section>
 
     <section id="about">
@@ -204,6 +197,6 @@
 
 
 </body>
-<script src="app.js"></script>
 <script src="codes.js"></script>
+<script src="app.js"></script>
 </html>
