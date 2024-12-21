@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Photo Filter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .filter-btn {
+            margin: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .filter-btn:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
-
 <body>
-    <div style="position: relative; z-index: 1; background: lightblue;">Box 1</div>
-    <div style="position: relative; z-index: 2; background: lightgreen;">Box 2</div>
-    <div style="position: relative; z-index: -1; background: lightcoral;">Box 3</div>
-</body>
+    <h1>Photo Filter App</h1>
+    <input type="file" id="file-input" accept="image/*">
+    <div id="image-container">
+        <img id="image" src="" alt="Upload an image">
+    </div>
+    <div>
+        <button class="filter-btn" onclick="applyFilter('none')">Original</button>
+        <button class="filter-btn" onclick="applyFilter('grayscale(100%)')">Grayscale</button>
+        <button class="filter-btn" onclick="applyFilter('sepia(100%)')">Sepia</button>
+        <button class="filter-btn" onclick="applyFilter('contrast(150%)')">High Contrast</button>
+        <button class="filter-btn" onclick="applyFilter('brightness(120%)')">Bright</button>
+        <button class="filter-btn" onclick="applyFilter('hue-rotate(90deg)')">Cool Tone</button>
+    </div>
+    <br>
+    <button class="filter-btn" onclick="downloadImage()">Download Image</button>
 
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const image = document.getElementById('image');
+
+        // Load uploaded image
+        fileInput.addEventListener('change', function () {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Apply filter to the image
+        function applyFilter(filter) {
+            image.style.filter = filter;
+        }
+
+        // Download the filtered image
+        function downloadImage() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = image.naturalWidth;
+            canvas.height = image.naturalHeight;
+
+            // Draw the filtered image on canvas
+            ctx.filter = getComputedStyle(image).filter;
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+            // Download the image
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/jpeg');
+            link.download = 'filtered-image.jpg';
+            link.click();
+        }
+    </script>
+</body>
 </html>

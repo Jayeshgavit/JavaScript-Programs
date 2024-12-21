@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Filter Web App</title>
+    <script src="https://kit.fontawesome.com/103ed24470.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container flex-between">
+            <h1 class="logo">PhotoFilterPro</h1>
+            <nav>
+                <ul class="nav-links flex-center">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#app">Try App</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex-center">
+        <div class="hero-content">
+            <h1>Enhance Your Photos Instantly</h1>
+            <p>Upload your photo, apply filters, and download it in seconds.</p>
+            <a href="#app" class="btn">Try Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container flex-center">
+            <div class="text-box">
+                <h2>About PhotoFilterPro</h2>
+                <p>
+                    PhotoFilterPro allows you to apply stunning filters to your images instantly. It's fast, simple, and free to use—no downloads or installations required!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="feature-grid flex-between">
+                <div class="feature-item">
+                    <h3>Real-Time Filters</h3>
+                    <p>Apply filters and preview changes instantly.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>User-Friendly</h3>
+                    <p>Simple and intuitive interface for everyone.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>High-Quality Output</h3>
+                    <p>Save your enhanced photos in high resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Filter App -->
+    <section id="app" class="section">
+        <div class="container flex-center">
+            <div class="app-content">
+                <h2>Try PhotoFilterPro</h2>
+                <input type="file" id="file-input" accept="image/*" class="file-input">
+                <div class="image-preview">
+                    <img id="image" src="" alt="Preview Image">
+                </div>
+                <div class="filter-buttons flex-center">
+                    <button onclick="applyFilter('none')">Original</button>
+                    <button onclick="applyFilter('grayscale(100%)')">Grayscale</button>
+                    <button onclick="applyFilter('sepia(100%)')">Sepia</button>
+                    <button onclick="applyFilter('contrast(150%)')">Contrast</button>
+                    <button onclick="applyFilter('brightness(120%)')">Bright</button>
+                    <button onclick="applyFilter('hue-rotate(90deg)')">Cool Tone</button>
+                </div>
+                <button id="download-btn" onclick="downloadImage()" class="btn">Download Image</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container flex-center">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>Email us at: <a href="mailto:support@photofilterpro.com">support@photofilterpro.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="col-1">
+                <img src="/logo.png" alt="">
+                <p>Follow my instagram channel named mubashar_dev to see more of such projects and other posts. Also
+                    Like and share these posts.Also follow me on Github and Linkedin. I hope you will like my content.
+                </p>
+            </div>
+            <div class="col-2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">C++</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>Newsletter</h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <p>© 2021 | Made with ❤️ by Mubashar Dev. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+<script src="script.js"></script>
+</html>
